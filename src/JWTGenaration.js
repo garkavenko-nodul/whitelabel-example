@@ -13,7 +13,6 @@ function JWTGeneration() {
   const [jwtToken, setJwtToken] = useState('');
 
   const handleGenerateToken = async () => {
-    console.log('start');
     if (isNaN(Number(tenantId))) {
       alert('Tenant ID must be a number.');
       return;
@@ -24,7 +23,6 @@ function JWTGeneration() {
       return;
     }
 
-    console.log('start 2',isNaN(Number(planId)), Number(planId));
 
     const payload = {
       tenant_id: Number(tenantId),
